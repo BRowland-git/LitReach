@@ -22,7 +22,7 @@ All of the dependencies are found on CRAN except for
 be installed from GitHub:
 
 ``` r
-devtools::install_github("lchiffon/wordcloud2")
+remotes::install_github("lchiffon/wordcloud2")
 ```
 
 The latest version can be installed from GitHub:
