@@ -145,7 +145,7 @@ to.choropleth <- function(land_dat, land_shapes, map.plot) {
 
   ## 3. Define labels ----
   landlabels <- sprintf(
-    "<strong>%s</strong><br/>%g IID1 and IID2 Citations <sup></sup>",
+    "<strong>%s</strong><br/>%g Citations <sup></sup>",
     geog_merge$country, geog_merge$count
   ) %>% lapply(htmltools::HTML)
 
@@ -179,7 +179,7 @@ to.choropleth <- function(land_dat, land_shapes, map.plot) {
       title = "Citations",
       position = "bottomright",
       group = "Land") %>%
-    addMarkers(lng = centroids$long, lat = centroids$lat) %>%
+    addAwesomeMarkers(lng = centroids$long, lat = centroids$lat) %>%
     setView(lng = -1.5, lat = 53.4, zoom = 1.5)
 
 }

@@ -196,7 +196,7 @@ ui <- dashboardPage(
         ),
         fluidRow(
           column(12,
-                 tableOutput("citetidy"),
+                 withSpinner(tableOutput("citetidy")),
                  br(),
                  downloadButton("datadownload", "Download Data")
           ),
@@ -696,7 +696,7 @@ observeEvent(input$tidy, {
   })
 
   output$primaryplot <- renderPlot(
-
+   tryCatch({
    impdata() %>%
         filter(primary == 1) %>% #Filter primary literature
         rowid_to_column(var = "id1") %>% #Create new column from row ids
@@ -723,7 +723,10 @@ observeEvent(input$tidy, {
         theme(plot.margin=grid::unit(c(0,0,0,0), "mm"),
               legend.position = "bottom",
               text = element_text(size = 20)) +
-        guides(fill = guide_legend(nrow = 3)), height = 800, width = 1200
+        guides(fill = guide_legend(nrow = 3))
+   }, error = function(e) {
+     print("No Metrics Data Provided")
+   }), height = 800, width = 1200
   )
 
   output$downloadPlot <- downloadHandler(
