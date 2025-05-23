@@ -696,7 +696,8 @@ observeEvent(input$tidy, {
   })
 
   output$primaryplot <- renderPlot(
-   tryCatch({
+  if(sum(c(impdata()$citation, impdata()$mentionsO, impdata()$mentionsP, impdata()$views, impdata()$downloads), na.rm = TRUE) > 0) {
+
    impdata() %>%
         filter(primary == 1) %>% #Filter primary literature
         rowid_to_column(var = "id1") %>% #Create new column from row ids
@@ -724,9 +725,11 @@ observeEvent(input$tidy, {
               legend.position = "bottom",
               text = element_text(size = 20)) +
         guides(fill = guide_legend(nrow = 3))
-   }, error = function(e) {
-     print("No Metrics Data Provided")
-   }), height = 800, width = 1200
+    } else {
+
+      print("No metric data was provided for the primary literature. Please add data if you want this plot to render.")
+
+      }, height = 800, width = 1200
   )
 
   output$downloadPlot <- downloadHandler(

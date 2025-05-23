@@ -179,7 +179,7 @@ to.choropleth <- function(land_dat, land_shapes, map.plot) {
       title = "Citations",
       position = "bottomright",
       group = "Land") %>%
-    addAwesomeMarkers(lng = centroids$long, lat = centroids$lat) %>%
+    #addAwesomeMarkers(lng = centroids$long, lat = centroids$lat) %>%
     setView(lng = -1.5, lat = 53.4, zoom = 1.5)
 
 }
