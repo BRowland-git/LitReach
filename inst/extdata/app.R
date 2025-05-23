@@ -348,8 +348,6 @@ ui <- dashboardPage(
 
 server <- function(input, output) {
 
-  addResourcePath("videos", system.file("videos", package = "LitReach"))
-
   output$primarytemp <- downloadHandler(
     filename = function() {
       # Use the selected dataset as the suggested file name
