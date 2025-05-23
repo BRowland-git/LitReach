@@ -23,17 +23,16 @@ This is free software, and you are welcome to redistribute it.
 
 ## Installation
 
-The latest version can be installed from GitHub:
-
-```{r installation, eval = FALSE}
-remotes::install_github("BRowland-git/LitReach")
-
-```
-
 All of the dependences are found on CRAN except for [wordcloud2](https://github.com/Lchiffon/wordcloud2) which will need to be installed from GitHub:
 
 ```{r wordcloud2, eval = FALSE}
 devtools::install_github("lchiffon/wordcloud2")
+
+```
+The latest version can be installed from GitHub:
+
+```{r installation, eval = FALSE}
+remotes::install_github("BRowland-git/LitReach")
 
 ```
 
