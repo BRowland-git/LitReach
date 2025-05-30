@@ -38,6 +38,8 @@ library(ggraph)
 library(tidygraph)
 library(plotly)
 library(htmlwidgets)
+library(cowplot)
+library(ggdraw)
 
 library(conflicted)
 
@@ -727,7 +729,8 @@ observeEvent(input$tidy, {
         guides(fill = guide_legend(nrow = 3))
     } else {
 
-      print("No metric data was provided for the primary literature. Please add data if you want this plot to render.")
+      ggdraw() +
+        draw_image(system.file("www", "No Data Warning.PNG", package = "LitReach"))
 
       }, height = 800, width = 1200
   )
