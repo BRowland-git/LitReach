@@ -46,9 +46,8 @@ Imports:
     polyglotr, 
     waffle, 
     fs, 
-    conflicted, 
-    cowplot,
-    ggdraw
+    conflicted,
+    cowplot
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 

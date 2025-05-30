@@ -39,7 +39,6 @@ library(tidygraph)
 library(plotly)
 library(htmlwidgets)
 library(cowplot)
-library(ggdraw)
 
 library(conflicted)
 
