@@ -764,10 +764,9 @@ observeEvent(input$tidy, {
                theme_ipsum_rc(grid="") +
                theme_enhance_waffle() +
                theme(plot.margin=grid::unit(c(0,0,0,0), "mm"),
-                     legend.position = "bottom",
-                     text = element_text(size = 20)) +
+                     legend.position = "bottom") +
                guides(fill = guide_legend(nrow = 3)), device = "png")
-    }, height = 800, width = 1200
+    }
   )
 
   #Store the word cloud in a reactiveValues object
