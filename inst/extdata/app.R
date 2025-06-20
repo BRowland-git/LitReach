@@ -764,8 +764,9 @@ observeEvent(input$tidy, {
                theme_ipsum_rc(grid="") +
                theme_enhance_waffle() +
                theme(plot.margin=grid::unit(c(0,0,0,0), "mm"),
-                     legend.position = "bottom") +
-               guides(fill = guide_legend(nrow = 3)), device = "png")
+                     legend.position = "bottom",
+                     text = element_text(size = 10)) +
+               guides(fill = guide_legend(nrow = 3)), device = "png", width = 1200, height = 800)
     }
   )
 
