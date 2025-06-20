@@ -767,7 +767,7 @@ observeEvent(input$tidy, {
                      legend.position = "bottom",
                      text = element_text(size = 20)) +
                guides(fill = guide_legend(nrow = 3)), device = "png")
-    }, height = 800, width = 1200
+    }
   )
 
   #Store the word cloud in a reactiveValues object
