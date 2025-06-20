@@ -765,7 +765,7 @@ observeEvent(input$tidy, {
                theme_enhance_waffle() +
                theme(plot.margin=grid::unit(c(0,0,0,0), "mm"),
                      legend.position = "bottom",
-                     text = element_text(size = 10)) +
+                     text = element_text(size = 16)) +
                guides(fill = guide_legend(nrow = 3)), device = "png", width = 8, height = 12)
     }
   )
