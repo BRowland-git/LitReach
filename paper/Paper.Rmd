@@ -12,15 +12,13 @@ authors:
     affiliation: 1
   - name: Aileen Mill
     affiliation: 1
-  - name: Sarah O'Brien
-    affiliation: 1
 affiliations:
  - name: Newcastle University
    index: 1
 citation_author: Rowland et. al.
 date: "`r Sys.Date()`"
-year: 2024
-bibliography: references.bib
+year: 2025
+bibliography: paper.bib
 output: rticles::joss_article
 journal: JOSS
 includes:
@@ -73,7 +71,7 @@ library(tidyverse)
 library(here)
 library(flextable)
 
-data <- read_csv(here::here("data", "Citation Data.csv")) %>% 
+data <- read_csv(here::here("example data", "Citation Data.csv")) %>% 
   select(ref_id:year, country) %>% 
   mutate(year = as.character(year))
 
@@ -101,7 +99,7 @@ The application is divided up into five tabs:
   
 ## Limitations
 
-The data need by LitReach is limited by the data that can be extracted from literature sources. One limitation of the app is that Google Scholar does not offer a mass download of citation data, so the user must use a different software. The data that is downloaded this way also does not include the first country of affiliation nor the type of literature the reference is (article, thesis, book etc.) so this must be added manually.
+The data need by LitReach is limited by the data that can be extracted from literature sources. One limitation of the app is that Google Scholar does not offer a mass download of citation data, so the user must use a different software. The data that is downloaded this way also does not include the first country of affiliation nor the type of literature the reference is (article, thesis, book etc.) so this must be added manually. The app however does not require data from all sources, so if the user only has data from a selection of sources the app will still work.
 
 ## Ongoing Research
 
@@ -113,6 +111,6 @@ The LitReach repository is available [here](https://github.com/BRowland-git/LitR
 
 ## Acknowledgements
 
-We acknowledge the Newcastle University Policy team for funding the work that lead to the idea of LitReach. 
+We acknowledge the Newcastle University Policy team for funding the work that lead to the idea of LitReach. We want to thank Jessica Ward and Emily Stevenson for their help in beta testing the package during development. 
 
 ## References
