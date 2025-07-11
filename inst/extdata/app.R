@@ -336,7 +336,7 @@ ui <- dashboardPage(
                  p("To make them viewable in the waffle plot the metrics were divided by 5.", style = "font-size:16px"),
                  br(),
                  p(strong("When was the app last updated?"), style = "font-size:18px"),
-                 p("31/01/2025", style = "font-size:16px"),
+                 p("11/07/2025", style = "font-size:16px"),
                  p(strong("References"), style = "font-size:24px"),
                  p(strong("Harzing, A.W. (2007) Publish or Perish, available from https://harzing.com/resources/publish-or-perish"), style = "font-size:18px"),
 
