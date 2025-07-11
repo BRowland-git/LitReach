@@ -263,7 +263,7 @@ ui <- dashboardPage(
         fluidRow(
           column(12,
                  withSpinner(wordcloud2Output("word_cloud")),
-                 p("*Top 200 words form the titles of the papers citing IID1 and IID2 output."),
+                 p("*Top 200 words form the titles of the citing papers."),
           ),
           downloadButton("saveword", "Download word cloud"),
         ),
