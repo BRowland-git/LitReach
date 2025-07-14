@@ -129,8 +129,11 @@ ui <- dashboardPage(
                    function for citations, so you will have to use the Publish or Perish (Harzin. 2007) software (link below) and we have included a video tutorial
                    for using this software."),
                  tags$a(href="https://harzing.com/resources/publish-or-perish", "Link to the Publish or Perish Website", target = "_blank"),
+                 br(),
                  tags$a(href="https://www.scopus.com/pages/home?display=basic&zone=header&origin=#basic", "Link to the Scopus", target = "_blank"),
+                 br(),
                  tags$a(href="https://www.webofscience.com/wos/woscc/basic-search", "Link to Web of Science", target = "_blank"),
+                 br(),
                  tags$a(href="https://pubmed.ncbi.nlm.nih.gov/", "Link to PubMeb", target = "_blank"),
                  br(),
                  br(),
