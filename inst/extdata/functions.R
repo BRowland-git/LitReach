@@ -144,11 +144,22 @@ to.choropleth <- function(land_dat, land_shapes, map.plot) {
   landpal <- colorBin("YlGn", domain = geog_merge$n, bins = landbins)
 
   ## 3. Define labels ----
+
+  if(geog_merge$count == 1){
+
   landlabels <- sprintf(
-    "<strong>%s</strong><br/>%g Citations <sup></sup>",
+    "<strong>%s</strong><br/>%g Citation <sup></sup>",
     geog_merge$country, geog_merge$count
   ) %>% lapply(htmltools::HTML)
 
+  } else{
+
+    landlabels <- sprintf(
+      "<strong>%s</strong><br/>%g Citations <sup></sup>",
+      geog_merge$country, geog_merge$count
+    ) %>% lapply(htmltools::HTML)
+
+  }
 
   ## 4. Map Choropleth: ----
   leaflet() %>%
